@@ -199,63 +199,15 @@ MediPlus es una aplicación web independiente que se integrará con el sistema d
 
 ## 5. Diagrama de Casos de Uso
 
-┌─────────────────────────────────────────────────────────────┐
-│ SISTEMA MEDIPLUS │
-├─────────────────────────────────────────────────────────────┤
-│ │
-│ ┌──────────────────┐ ┌──────────────────┐ │
-│ │ AGENDAR CITA │ │ CONSULTAR │ │
-│ │ ONLINE │ │ DISPONIBILIDAD │ │
-│ └──────────────────┘ └──────────────────┘ │
-│ ↑ ↑ │
-│ │ │ │
-│ ┌──────────────────┐ ┌──────────────────┐ │
-│ │ CANCELAR/ │ │ CONSULTAR │ │
-│ │ REPROGRAMAR │ │ HISTORIAL │ │
-│ │ CITA │ │ DE CITAS │ │
-│ └──────────────────┘ └──────────────────┘ │
-│ ↑ ↑ │
-│ │ │ │
-│ ┌──────────────────┐ ┌──────────────────┐ │
-│ │ REGISTRAR │ │ GESTIONAR │ │
-│ │ CONSULTA │ │ AGENDA MÉDICA │ │
-│ │ MÉDICA (HCE) │ │ │ │
-│ └──────────────────┘ └──────────────────┘ │
-│ ↑ ↑ │
-│ │ │ │
-│ ┌──────────────────┐ ┌──────────────────┐ │
-│ │ REGISTRAR │ │ GENERAR │ │
-│ │ SIGNOS VITALES │ │ REPORTES │ │
-│ └──────────────────┘ └──────────────────┘ │
-│ ↑ │
-│ │ │
-│ ┌──────────────────┐ ┌──────────────────┐ │
-│ │ GESTIONAR │ │ CONTROLAR │ │
-│ │ INVENTARIO │ │ DESPACHO │ │
-│ │ FARMACIA │ │ MEDICAMENTOS │ │
-│ └──────────────────┘ └──────────────────┘ │
-│ │
-└─────────────────────────────────────────────────────────────┘
-↑ ↑
-│ │
-┌─────────┴──────────┐ ┌─────────┴──────────┐
-│ USUARIO PACIENTE │ │ MÉDICO │
-│ (Actor Primario) │ │ (Actor Primario) │
-└────────────────────┘ └────────────────────┘
-↑ ↑
-├─────────────────────────────┤
-│ │
-┌─────────┴──────────┐ ┌─────────┴──────────┐
-│ RECEPCIONISTA │ │ ENFERMERA │
-│ (Actor Secundario)│ │ (Actor Secundario)│
-└────────────────────┘ └────────────────────┘
-↑ ↑
-├─────────────────────────────┤
-│ │
-┌─────────┴──────────┐ ┌─────────┴──────────┐
-│ FARMACEUTA │ │ DIRECTOR │
-│ (Actor Secundario)│ │ (Actor Secundario)│
-└────────────────────┘ └────────────────────┘
+
+
+
+<img width="2048" height="1080" alt="jS0_9Aajdd5zcWXEoprFa" src="https://github.com/user-attachments/assets/d2d03d93-6274-4383-a5c7-12ce7252386c" />
+
+
+
+
+
 
 ## 6. Diagrama de Casos de Uso Detallado
 
