@@ -201,7 +201,8 @@ MediPlus es una aplicación web independiente que se integrará con el sistema d
 
 
 
-https://www.mymap.ai/playground?mid=vSazMfSXfx1Z1&is_share=true
+<img width="4096" height="2160" alt="image" src="https://github.com/user-attachments/assets/f5e45b97-a5b7-49fc-9d2e-2a8bac7025fd" />
+
 
 
 
