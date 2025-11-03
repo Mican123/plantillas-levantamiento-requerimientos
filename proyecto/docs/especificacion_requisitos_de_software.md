@@ -200,8 +200,8 @@ MediPlus es una aplicación web independiente que se integrará con el sistema d
 ## 5. Diagrama de Casos de Uso
 
 
+<img width="2284" height="700" alt="image" src="https://github.com/user-attachments/assets/bee701a5-4346-4c10-92d1-6a491f934ef1" />
 
-<img width="4096" height="2160" alt="image" src="https://github.com/user-attachments/assets/f5e45b97-a5b7-49fc-9d2e-2a8bac7025fd" />
 
 
 
