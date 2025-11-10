@@ -9,24 +9,42 @@ Este documento especifica los requisitos para el Sistema MediPlus, una aplicaci�
 ### 1.2 Alcance
 El sistema permitirá la gestión integral del flujo de atención médica, desde la solicitud de cita hasta el registro de la consulta, incluyendo gestión de disponibilidad médica, recordatorios automáticos, historia clínica digital y generación de reportes estadísticos.
 
-### 1.3 Definiciones, acrónimos y abreviaturas
-- **MediPlus**: Nombre del sistema de gestión de citas y consulta externa
-- **HCE**: Historia Clínica Electrónica
-- **URP**: Universidad Regional del Pacífico
-- **EPS-U**: Aseguradora universitaria
-- **SSO**: Single Sign-On (autenticación única)
-- **RIPS**: Registro Individual de Prestación de Servicios de Salud
-- **MVP**: Producto Mínimo Viable
+### 1.3 Personal involucrado
+| Rol | Organización | Responsabilidad | Contacto |
+|-----|-------------|-----------------|----------|
+| Director Médico | Clínica MediPlus | Aprobación requisitos clínicos | dr.garcia@mediplus.com |
+| Gerente Administrativo | Clínica MediPlus | Supervisión operativa | admin@mediplus.com |
+| Jefe de TI | Clínica MediPlus | Implementación técnica | ti@mediplus.com |
+| Director general| Clínica MediPlus | Toma de decisiones estratégicas | dr.hernan@mediplus.com |
+| Director de Enfermería | Clínica MediPlus | Gestión del personal de enfermería | denfermeria@mediplus.com |
+| Jefe de Recursos Humanos | Clínica MediPlus | Gestión del personal | rrhh@mediplus.com |
+
 
 ### 1.4 Referencias
-- IEEE Std 830-1998
-- Ley 1438 de 2011 - Historia Clínica Digital
-- Ley 1581 de 2012 - Protección de Datos Personales
-- Resolución 1995 de 1999 - Normativa de Historias Clínicas
-- Manual de procesos del Centro de Salud San Rafael
+| Término | Definición |
+|---------|------------|
+| EMR | Historia Clínica Electrónica (Electronic Medical Record) |
+| HIPAA | Ley de Portabilidad y Seguro de Salud (EE.UU.) |
+| LOPD | Ley Orgánica de Protección de Datos |
+| UI | Interfaz de Usuario |
+| UX | Experiencia de Usuario |
+| API | Interfaz de Programación de Aplicaciones |
+| SMS | Servicio de Mensajes Cortos |
+| CRM | Sistema de Gestión de Relación con Pacientes |
 
-### 1.5 Resumen
-El documento describe el sistema MediPlus que reemplazará los procesos manuales actuales, mejorando la eficiencia operativa y reduciendo los riesgos médico-legales.
+#### 1.5 Referencias
+
+1. **IEEE Std 830-1998** - IEEE Recommended Practice for Software Requirements Specifications
+2. **LOPD** - Ley Orgánica 3/2018 de Protección de Datos Personales
+3. **HIPAA** - Health Insurance Portability and Accountability Act
+4. **Plantilla Base:** github.com/cfernandom/plantillas-levantamiento-requerimientos
+5. **Documento de Alcance:** MEDI-ALE-001 v1.0
+6. **Estándares Médicos:** Normativa SAN-2023-0456 de historiales clínicos
+
+   #### 1.6 Resumen
+
+El Sistema MediPlus es una plataforma web diseñada para optimizar la gestión de citas médicas en la clínica. Permitirá a los pacientes agendar citas en línea, a los médicos gestionar sus agendas, y al personal administrativo supervisar las operaciones. El sistema mejorará la eficiencia operativa reduciendo los tiempos de espera y los no-shows mediante recordatorios automáticos.
+
 
 ## 2. Descripción general
 
@@ -44,15 +62,19 @@ MediPlus es una aplicación web independiente que se integrará con el sistema d
 - Gestión de ausentismo y cancelaciones
 
 ### 2.3 Características de los usuarios
-- **Estudiantes (85%)**: Usuarios principales, nativos digitales, requieren agendamiento rápido y autónomo
-- **Docentes y Administrativos (15%)**: Mismas funcionalidades pero con diferentes perfiles de disponibilidad
-- **Recepcionistas**: Personal administrativo que requiere interfaces eficientes para agendamiento presencial
-- **Médicos Generales**: Profesionales con variada habilidad tecnológica, necesitan interfaces intuitivas
-- **Especialistas (Psicólogos, Odontólogos)**: Requieren funcionalidades específicas por especialidad
-- **Personal de Enfermería**: Necesitan acceso rápido para registro de signos vitales
-- **Farmaceuta**: Gestión de inventario y despacho de medicamentos
-- **Directores**: Acceso a dashboards y reportes gerenciales
+-->
 
+| Característica | 	Usuario Tipo 1: Paciente | Usuario Tipo 2: Médico | Usuario Tipo 3: Recepcionista |
+|----------------|-----------------------------------|-----------------------------------|-----------------------------------|
+| **Descripción** | Persona que utiliza el sistema para gestionar sus citas médicas y consultas | Profesional de la salud que atiende pacientes y gestiona su agenda | Personal administrativo que coordina citas y atención al paciente |
+| **Responsabilidades** | Agendar, cancelar y reprogramar citas; ver su historial de consultas | Gestionar disponibilidad; atender citas; revisar historiales de pacientes | Registrar pacientes; coordinar citas; manejar consultas telefónicas |
+| **Nivel Técnico** | Bajo | Medio | Medio |
+| **Experiencia en el Dominio** | Novato | Experto | Intermedio |
+| **Frecuencia de Uso** | Ocasional | Diaria | Diaria |
+| **Funciones Principales** | agendar citas/cancelar/reprogramar  |  Gestionar horarios de atención/Ver agenda de citas/Consultar historial de pacientes |   Registrar nuevos pacientes/Asignar citas manualmente/Gestionar cancelaciones |
+| **Necesidades Especiales** | Interfaz intuitiva y guiada; recordatorios automáticos; acceso móvil | Acceso rápido y eficiente; integración con herramientas médicas; mínima interrupción | Vista consolidada de múltiples agendas; búsqueda rápida; multitarea|
+
+<!
 ### 2.4 Restricciones
 - **Legales**: Debe cumplir con Ley 1438/2011 (HCE), Ley 1581/2012 (protección de datos) y Resolución 1995/1999
 - **Técnicas**: Integración con SSO universitario (OAuth 2.0), compatibilidad con navegadores Chrome 90+, Firefox 88+
@@ -145,6 +167,125 @@ MediPlus es una aplicación web independiente que se integrará con el sistema d
 - Los medicamentos formulados se envían automáticamente a farmacia
 - El registro queda auditado y no editable (solo puede agregarse notas de evolución)
 
+RF-009: Sistema de Recordatorios Automáticos Multicanal
+Descripción: El sistema debe enviar recordatorios automáticos de citas a través de múltiples canales de comunicación
+Prioridad: Alta
+Criterios de Aceptación:
+
+CA-009.1: Envío automático de email recordatorio 24 horas antes de la cita
+
+CA-009.2: Envío de SMS recordatorio 2 horas antes de la cita
+
+CA-009.3: Sistema registra confirmación de lectura cuando sea posible
+
+CA-009.4: Configuración de horarios de envío para diferentes tipos de recordatorios
+
+CA-009.5: Plantillas personalizables para mensajes de recordatorio
+
+RF-010: Gestión de Cancelaciones y Reprogramaciones
+Descripción: El sistema debe permitir la cancelación y reprogramación de citas por pacientes y administradores
+Prioridad: Alta
+Criterios de Aceptación:
+
+CA-010.1: Paciente puede cancelar cita hasta 4 horas antes sin penalización
+
+CA-010.2: Sistema sugiere horarios alternativos al reprogramar
+
+CA-010.3: Administrativo puede cancelar o reprogramar citas con notificación al paciente
+
+CA-010.4: Registro de motivo de cancelación para análisis estadístico
+
+CA-010.5: Política de cancelaciones configurable por tipo de consulta
+
+RF-011: Historial Básico de Consultas por Paciente
+Descripción: El sistema debe mantener un historial básico de consultas realizadas por cada paciente
+Prioridad: Media
+Criterios de Aceptación:
+
+CA-011.1: Registro de fecha, médico, especialidad y motivo de cada consulta
+
+CA-011.2: Acceso al historial por parte del paciente en su portal
+
+CA-011.3: Médico puede ver historial previo del paciente durante la consulta
+
+CA-011.4: Búsqueda de consultas anteriores por fecha o especialidad
+
+CA-011.5: Exportación básica del historial en formato PDF
+
+RF-012: Sistema de Notificaciones en Tiempo Real
+Descripción: El sistema debe proporcionar notificaciones en tiempo real para eventos importantes
+Prioridad: Media
+Criterios de Aceptación:
+
+CA-012.1: Notificación inmediata al médico cuando se agenda nueva cita
+
+CA-012.2: Alertas para citas canceladas o reprogramadas
+
+CA-012.3: Notificaciones push en el dashboard administrativo para eventos críticos
+
+CA-012.4: Sistema de notificaciones no intrusivo con diferentes niveles de prioridad
+
+CA-012.5: Historial de notificaciones accesible para cada usuario
+
+RF-013: Búsqueda Avanzada y Filtros
+Descripción: El sistema debe proporcionar funcionalidades de búsqueda avanzada con múltiples filtros
+Prioridad: Media
+Criterios de Aceptación:
+
+CA-013.1: Búsqueda de pacientes por nombre, teléfono o email
+
+CA-013.2: Filtros de citas por fecha, médico, especialidad o estado
+
+CA-013.3: Búsqueda de disponibilidad por rango de fechas y especialidad
+
+CA-013.4: Guardado y reutilización de búsquedas frecuentes
+
+CA-013.5: Exportación de resultados de búsqueda en formato Excel
+
+RF-014: Dashboard de Métricas y Reportes
+Descripción: El sistema debe generar reportes y mostrar métricas clave en un dashboard
+Prioridad: Baja
+Criterios de Aceptación:
+
+CA-014.1: Dashboard con métricas de ocupación médica por especialidad
+
+CA-014.2: Reporte de tasas de cancelación y no-shows
+
+CA-014.3: Estadísticas de utilización de recursos por médico
+
+CA-014.4: Generación de reportes personalizados por rango de fechas
+
+CA-014.5: Exportación de reportes en formatos PDF y Excel
+
+RF-015: Gestión de Especialidades y Servicios
+Descripción: El sistema debe permitir la gestión de especialidades médicas y servicios ofrecidos
+Prioridad: Media
+Criterios de Aceptación:
+
+CA-015.1: Creación y edición de especialidades médicas con descripción
+
+CA-015.2: Asignación de médicos a múltiples especialidades
+
+CA-015.3: Configuración de duración estándar de consulta por especialidad
+
+CA-015.4: Gestión de servicios adicionales (exámenes, procedimientos)
+
+CA-015.5: Asignación de precios y códigos a servicios (para futura facturación)
+
+RF-016: Sistema de Backup y Recuperación
+Descripción: El sistema debe realizar backups automáticos y permitir recuperación de datos
+Prioridad: Alta
+Criterios de Aceptación:
+
+CA-016.1: Backup automático diario de la base de datos
+
+CA-016.2: Backup incremental cada 4 horas durante horario comercial
+
+CA-016.3: Sistema de recuperación ante desastres con RTO < 4 horas
+
+CA-016.4: Verificación automática de integridad de backups
+
+CA-016.5: Almacenamiento seguro de backups con encriptación
 ## 4. Casos de uso
 
 ### 4.1 Agendar Cita Médica Online
@@ -196,6 +337,7 @@ MediPlus es una aplicación web independiente que se integrará con el sistema d
 - El usuario recibe confirmación por correo electrónico
 - El horario queda bloqueado en la agenda del médico
 - Se programa recordatorio automático
+
 
 ## 5. Diagrama de Casos de Uso
 
