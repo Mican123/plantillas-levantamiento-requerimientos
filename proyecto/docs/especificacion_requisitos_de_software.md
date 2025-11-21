@@ -441,3 +441,5 @@ Horario médico deseado no disponible, paciente registrado en sistema
 -8a: Paciente rechaza horario → permanece en lista para próximas opciones
 
 **Postcondiciones:** Paciente en lista de espera o cita confirmada, notificaciones enviadas
+
+https://mapify.so/share-link/wcchew6bES
