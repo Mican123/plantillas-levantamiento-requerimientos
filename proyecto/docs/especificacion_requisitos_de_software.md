@@ -408,35 +408,36 @@ CA-020.5: Opción de sincronización unidireccional o bidireccional configurable
 - Se programa recordatorio automático
 
 
-CU-007: Gestionar Lista de Espera
-Actor: Paciente
-Propósito: Solicitar ingreso a lista de espera para horarios no disponibles
-Precondiciones: Horario médico deseado no disponible, paciente registrado en sistema
+CU-007: 
+**Nombre:** Gestionar Lista de Espera
+**Actores:** Paciente
+**Propósito:** Solicitar ingreso a lista de espera para horarios no disponibles
+Horario médico deseado no disponible, paciente registrado en sistema
 
-Flujo Principal:
+**Flujo Principal:**
 
-Paciente busca disponibilidad para médico/especialidad específica
+-Paciente busca disponibilidad para médico/especialidad específica
 
-Sistema muestra mensaje "No hay horarios disponibles"
+-Sistema muestra mensaje "No hay horarios disponibles"
 
-Sistema ofrece opción "Unirse a lista de espera"
+-Sistema ofrece opción "Unirse a lista de espera"
 
-Paciente confirma ingreso a lista de espera
+-Paciente confirma ingreso a lista de espera
 
-Sistema registra solicitud con timestamp
+-Sistema registra solicitud con timestamp
 
-Cuando surge disponibilidad por cancelación, sistema notifica al primer paciente en lista
+-Cuando surge disponibilidad por cancelación, sistema notifica al primer paciente en lista
 
-Paciente recibe notificación con opción de confirmar en 2 horas
+-Paciente recibe notificación con opción de confirmar en 2 horas
 
-Si confirma, sistema agenda cita automáticamente
+-Si confirma, sistema agenda cita automáticamente
 
-Si no confirma, sistema notifica al siguiente en lista
+-Si no confirma, sistema notifica al siguiente en lista
 
-Flujos Alternativos:
+**Flujos Alternativos:**
 
-7a: Paciente no responde en 2 horas → sistema pasa al siguiente en lista
+-7a: Paciente no responde en 2 horas → sistema pasa al siguiente en lista
 
-8a: Paciente rechaza horario → permanece en lista para próximas opciones
+-8a: Paciente rechaza horario → permanece en lista para próximas opciones
 
-Postcondiciones: Paciente en lista de espera o cita confirmada, notificaciones enviadas
+**Postcondiciones:** Paciente en lista de espera o cita confirmada, notificaciones enviadas
