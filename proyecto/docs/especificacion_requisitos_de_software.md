@@ -476,7 +476,7 @@ Sistema programa sincronizaciones automáticas para cambios futuros
 
 **Postcondiciones:** Citas sincronizadas con calendario externo, actualizaciones automáticas configuradas
 
-[![](https://mapify.so/share-link/XZLQJ6hyTH)
+[](https://mapify.so/share-link/XZLQJ6hyTH)
 
 
 
