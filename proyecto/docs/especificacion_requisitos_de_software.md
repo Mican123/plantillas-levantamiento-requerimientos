@@ -476,7 +476,141 @@ Sistema programa sincronizaciones automáticas para cambios futuros
 
 **Postcondiciones:** Citas sincronizadas con calendario externo, actualizaciones automáticas configuradas
 
-[](https://mapify.so/share-link/XZLQJ6hyTH)
+https://mapify.so/share-link/XZLQJ6hyTH
+
+CU-003: 
+**Nombre:** Gestionar Recordatorios Automáticos
+**Actores:** Sistema (automático)
+**Propósito:** Programar y enviar recordatorios de citas automáticamente
+**Precondiciones**: Citas confirmadas existen en el sistema, servicios de email/SMS operativos
+
+**Flujo Principal:**
+
+El sistema identifica citas programadas para las próximas 24 horas
+
+Para cada cita, verifica preferencias de notificación del paciente
+
+Sistema envía email recordatorio con detalles de la cita
+
+Sistema programa SMS recordatorio para 2 horas antes de la cita
+
+Registra envíos exitosos en el log del sistema
+
+Actualiza estado de notificación en el registro de la cita
+
+**Flujos Alternativos:**
+
+3a: Fallo en envío de email → Reintenta después de 30 minutos
+
+4a: Paciente no tiene teléfono registrado → Omite envío de SMS
+
+**Postcondiciones:** Recordatorios enviados, logs actualizados
+
+https://mapify.so/share-link/tuqwQMIIFw
+
+
+CU-004: 
+**Nombre**Cancelar y Reprogramar Cita
+**Actores:** Paciente
+**Propósito:** Cancelar una cita existente u optar por reprogramación
+**Precondiciones:** Paciente tiene cita confirmada, está dentro de plazo permitido
+
+**Flujo Principal:**
+
+Paciente inicia sesión en su portal
+
+Accede a la sección "Mis Citas Próximas"
+
+Selecciona la cita que desea modificar
+
+Elige opción "Cancelar" o "Reprogramar"
+
+Si cancela: proporciona motivo y confirma cancelación
+
+Si reprograma: sistema muestra disponibilidad alternativa
+
+Paciente selecciona nuevo horario y confirma
+
+Sistema envía confirmación de la modificación
+
+**Flujos Alternativos:**
+
+5a: Cancelación fuera de plazo → Sistema informa política y posibles cargos
+
+7a: No encuentra horario conveniente → Puede cancelar completamente
+
+**Postcondiciones:** Cita cancelada/reprogramada, notificaciones enviadas
+
+
+https://mapify.so/share-link/xOtOjvdctG
+
+
+CU-005: 
+**Nombre:** Generar Reporte de Métricas
+**Actores:** Administrador
+**Propósito:** Generar reportes de rendimiento y métricas de la clínica
+**Precondiciones:** Usuario tiene rol de administrador, existen datos históricos
+
+**Flujo Principal:**
+
+Administrador accede al dashboard de reportes
+
+Selecciona tipo de reporte (ocupación, cancelaciones, ingresos)
+
+Define parámetros: rango de fechas, especialidad, médico
+
+Sistema genera vista previa del reporte
+
+Administrador selecciona formato de exportación (PDF/Excel)
+
+Sistema genera el archivo en el formato seleccionado
+
+Administrador descarga el reporte
+
+**Flujos Alternativos:**
+
+4a: No hay datos para los parámetros → Sistema sugiere ajustar criterios
+
+6a: Error en generación → Sistema notifica y sugiere reintentar
+
+**Postcondiciones:** Reporte generado y descargado
+
+https://mapify.so/share-link/9wjLNjdXZR
+
+
+CU-006: 
+**Nombre:** Gestionar Horarios y Disponibilidad Médica
+**Actores:** Médico
+**Propósito:** Configurar y modificar horarios de disponibilidad para consultas
+**Precondiciones:** Médico tiene perfil activo en el sistema
+
+**Flujo Principal:**
+
+Médico accede a su panel de control
+
+Selecciona "Gestión de Horarios"
+
+Sistema muestra calendario semanal actual
+
+Médico puede: establecer horario regular, bloquear días específicos, agregar horarios especiales
+
+Para cada modificación, sistema valida conflictos con citas existentes
+
+Si hay conflictos, sistema notifica y sugiere alternativas
+
+Médico confirma los cambios
+
+Sistema actualiza disponibilidad y notifica a administradores si hay cambios significativos
+
+**Flujos Alternativos:**
+
+5a: Conflicto con citas existentes → Sistema muestra citas afectadas y opciones
+
+7a: Cambios complejos → Sistema requiere confirmación adicional
+
+**Postcondiciones:** Disponibilidad actualizada, notificaciones enviadas si aplica
+
+https://mapify.so/share-link/7YtjG9f2L9.
 
 
 
