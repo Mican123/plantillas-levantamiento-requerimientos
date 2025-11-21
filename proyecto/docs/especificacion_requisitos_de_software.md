@@ -293,6 +293,68 @@ CA-016.3: Sistema de recuperación ante desastres con RTO < 4 horas
 CA-016.4: Verificación automática de integridad de backups
 
 CA-016.5: Almacenamiento seguro de backups con encriptación
+
+RF-017: Sistema de Listas de Espera Inteligentes
+Descripción: El sistema debe gestionar listas de espera automáticas para horarios médicos altamente demandados
+Prioridad: Media
+Criterios de Aceptación:
+
+CA-017.1: Paciente puede solicitar ingreso a lista de espera para especialidad/específico médico
+
+CA-017.2: Sistema notifica automáticamente cuando surge disponibilidad por cancelación
+
+CA-017.3: Ofrece horario disponible con ventana de 2 horas para confirmación
+
+CA-017.4: Asignación automática por orden de solicitud en lista de espera
+
+CA-017.5: Límite configurable de pacientes en lista de espera por médico
+
+RF-018: Gestión de Documentos Adjuntos
+Descripción: El sistema debe permitir adjuntar documentos a las citas y perfiles de pacientes
+Prioridad: Baja
+Criterios de Aceptación:
+
+CA-018.1: Médico puede adjuntar documentos a consulta (prescripciones, notas)
+
+CA-018.2: Paciente puede subir documentos previos a la cita (exámenes, estudios)
+
+CA-018.3: Límite de 10MB por archivo con tipos permitidos (PDF, JPG, PNG, DOC)
+
+CA-018.4: Encriptación de documentos sensibles en reposo y tránsito
+
+CA-018.5: Control de versiones para documentos modificados
+
+RF-019: Sistema de Encuestas de Satisfacción
+Descripción: El sistema debe enviar encuestas de satisfacción automáticas post-consulta
+Prioridad: Baja
+Criterios de Aceptación:
+
+CA-019.1: Envío automático de encuesta 2 horas después de la cita completada
+
+CA-019.2: Encuesta máxima de 5 preguntas con escala 1-5 estrellas
+
+CA-019.3: Campo opcional para comentarios libres del paciente
+
+CA-019.4: Dashboard con métricas de satisfacción por médico y especialidad
+
+CA-019.5: Alertas para puntuaciones inferiores a 3 estrellas
+
+RF-020: Integración con Calendarios Externos
+Descripción: El sistema debe sincronizar citas con calendarios externos de pacientes y médicos
+Prioridad: Media
+Criterios de Aceptación:
+
+CA-020.1: Paciente puede agregar cita a Google Calendar/Outlook/Apple Calendar
+
+CA-020.2: Médico puede sincronizar su agenda con calendario corporativo
+
+CA-020.3: Actualización automática en calendarios externos ante cambios
+
+CA-020.4: Formato estándar iCal para compatibilidad multiplataforma
+
+CA-020.5: Opción de sincronización unidireccional o bidireccional configurable
+
+
 ## 4. Casos de uso
 
 ### 4.1 Agendar Cita Médica Online
