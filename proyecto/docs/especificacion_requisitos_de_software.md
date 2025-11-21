@@ -444,5 +444,41 @@ Horario médico deseado no disponible, paciente registrado en sistema
 
 https://mapify.so/share-link/wcchew6bES
 
+CU-008: 
+**nombre:** Sincronizar con Calendario Externo
+**Actores:** Paciente/Médico
+**Propósito:** Sincronizar citas y agenda con calendarios personales/profesionales
+**Precondiciones:** Usuario tiene cita programada o agenda configurada
+
+**Flujo Principal:**
+
+Usuario accede a sección "Mis Citas" o "Mi Agenda"
+
+Sistema muestra opción "Sincronizar con Calendario"
+
+Usuario selecciona proveedor de calendario (Google/Outlook/Apple)
+
+Sistema genera archivo iCal o conecta via API según selección
+
+Para API: usuario autoriza acceso a calendario
+
+Sistema sincroniza citas existentes y agenda
+
+Usuario confirma sincronización exitosa
+
+Sistema programa sincronizaciones automáticas para cambios futuros
+
+**Flujos Alternativos:**
+
+5a: Usuario rechaza autorización → ofrecer descarga manual de archivo iCal
+
+7a: Error en sincronización → sistema sugiere reintentar o contactar soporte
+
+**Postcondiciones:** Citas sincronizadas con calendario externo, actualizaciones automáticas configuradas
+
+(https://mapify.so/share-link/XZLQJ6hyTH)
+
+
+
 
 
