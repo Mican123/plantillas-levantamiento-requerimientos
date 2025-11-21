@@ -4,8 +4,15 @@
 ## 1. Introducción
 
 ### 1.1 Propósito
-Este documento especifica los requisitos para el Sistema MediPlus, una aplicación web que automatizará los procesos de agendamiento de citas, gestión de historias clínicas electrónicas y control de consultas externas para el Centro de Salud Universitario San Rafael.
+Este documento proporciona una especificación completa de los requisitos para el Sistema MediPlus de Gestión de Consultas y Citas Médicas. Está dirigido a:
 
+Equipo de desarrollo: Como base para el diseño, implementación y pruebas del sistema
+
+Personal médico y administrativo: Para validar que las funcionalidades cubren sus necesidades operativas
+
+Stakeholders y dirección: Para aprobación del alcance y planificación de recursos
+
+Equipo de calidad: Para desarrollar casos de prueba y validación de criterios de aceptación
 ### 1.2 Alcance
 El sistema permitirá la gestión integral del flujo de atención médica, desde la solicitud de cita hasta el registro de la consulta, incluyendo gestión de disponibilidad médica, recordatorios automáticos, historia clínica digital y generación de reportes estadísticos.
 
