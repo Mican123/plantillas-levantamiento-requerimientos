@@ -443,3 +443,6 @@ Horario médico deseado no disponible, paciente registrado en sistema
 **Postcondiciones:** Paciente en lista de espera o cita confirmada, notificaciones enviadas
 
 https://mapify.so/share-link/wcchew6bES
+
+
+
